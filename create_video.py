@@ -18,8 +18,9 @@ proverb = random.choice(proverbs)
 # Create video clip from image
 image_clip = ImageClip(image_path).with_duration(10).resized(width=640)  # 10 seconds video, lower resolution
 
-# Create text overlay
-txt_clip = TextClip(text=proverb, color='white', font_size=30)
+# Create text overlay with better visibility
+txt_clip = TextClip(text=proverb, color='white', font_size=30, 
+                   stroke_color='black', stroke_width=3)
 txt_clip = txt_clip.with_position('center').with_duration(10)
 
 # Add background music
